@@ -1,6 +1,5 @@
 import React, {FC} from "react";
 import { observer } from "mobx-react";
-import Login from './Login'
 import style from '../style/index.less';
 
 
@@ -13,7 +12,7 @@ const View:FC<Props> = observer((props) => {
 
     return (
        <div>
-          <Login placeholder={props.store.placeholder}/>
+          Home
        </div>
     );
 })

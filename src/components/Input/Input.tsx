@@ -1,14 +1,21 @@
 import React from 'react';
-import style from '../style/card.less';
+import style from './style/index.less';
+import {Button} from 'antd'
 
 
 const Input: React.FC<{
-   placeholder:string
+   placeholder: string,
+   message:string,
+   type:string
 }> = (props) => {
 
    return (
-      <div>
-         {props.placeholder}
+      <div className={style.input}>
+         <div className={style[`${props.type}Icon`]}/>
+         <div className={style.inputArea}>
+            <input className={style.inputBox} placeholder={props.placeholder} />
+            {props.message ? <span className={style.message}>{props.message}</span> : null}
+         </div>
       </div>
    )
 }
