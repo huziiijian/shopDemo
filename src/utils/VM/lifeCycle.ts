@@ -22,7 +22,7 @@ export default abstract class <P = {}, S = {}>{
             getParams: () => props.match.params,
             getQuery: () => qs.parse(props.location.search.replace('?', ''))
         })
-        console.log('__plugins', this.$ctx)
+      //   console.log('__plugins', this.$ctx)
     }
     componentDidMount = () => {}
     componentWillUnmount = () =>{}

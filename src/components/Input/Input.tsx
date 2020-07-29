@@ -1,20 +1,22 @@
 import React from 'react';
 import style from './style/index.less';
-import {Button} from 'antd'
 
 
 const Input: React.FC<{
    placeholder: string,
-   message:string,
-   type:string
+   message: string,
+   type: string,
+   getInputValue: (e: string) => void
 }> = (props) => {
 
    return (
       <div className={style.input}>
-         <div className={style[`${props.type}Icon`]}/>
+         <div className={style[`${props.type}Icon`]} />
          <div className={style.inputArea}>
-            <input className={style.inputBox} placeholder={props.placeholder} />
-            {props.message ? <span className={style.message}>{props.message}</span> : null}
+            <input className={style.inputBox} placeholder={props.placeholder}
+               onChange={(e) => props.getInputValue(e.target.value)} />
+            {props.message ? <span className={style.message} onClick={() => console.log(props.message)}>
+               {props.message}</span> : null}
          </div>
       </div>
    )
