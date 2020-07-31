@@ -1,0 +1,355 @@
+body {
+   background-color: #0000000a;
+
+   .intro {
+      width: 100%;
+
+      .header {
+         background-color: white;
+
+         .searchBar {
+            display: flex;
+            justify-content: space-around;
+            background-image: linear-gradient(-45deg, #56AB2F 0%, #A8E063 100%);
+            padding: 60px 0;
+
+            img {
+               width: 6%;
+               height: 6%;
+               margin: 8px;
+            }
+
+            .switch {
+               width: 5%;
+               height: 5%;
+               margin: auto 0;
+            }
+
+            span {
+               font-family: Helvetica;
+               font-size: 32px;
+               color: #FFFFFF;
+               letter-spacing: 0;
+               line-height: 68px;
+            }
+
+            input {
+               border: none;
+               color: opacity(0.3);
+               background: url(https://image-c.weimobwmc.com/wrz/abd255a6dbbd4f24b996c4d13ab5432a.png) no-repeat 20px;
+               background-size: 30px;
+               background-color: white;
+               width: 60%;
+               padding: 15px;
+               border-radius: 60px;
+               margin: 0 10px 0 0;
+            }
+
+            input:focus {
+               background-color: white;
+            }
+         }
+
+         .carousel {
+            height: 300px;
+            background-color: yellow;
+         }
+
+
+         .switchShop {
+            display: flex;
+            justify-content: space-around;
+            border-width: 0 0 1px 0;
+            border-style: solid;
+            border-color: #06060618;
+            margin: 0 3%;
+
+            p {
+               width: 80%;
+               margin: 3% 0;
+               opacity: 0.7;
+               font-family: Helvetica;
+               font-size: 32px;
+               color: #000000;
+               letter-spacing: 0;
+            }
+
+            span {
+               width: 17%;
+               margin: auto 0;
+               font-family: Helvetica;
+               font-size: 28px;
+               color: #379000;
+               letter-spacing: 0;
+            }
+
+            img {
+               width: 5%;
+               height: 5%;
+               margin: auto 0;
+            }
+         }
+
+      }
+
+      .services {
+         background-color: white;
+         padding: 0 3% 3% 3%;
+         display: flex;
+         flex-flow: row wrap;
+
+         .serviceType {
+            width: 20%;
+
+            img {
+               width: 15vw;
+            }
+
+            p {
+               margin: 0 auto;
+               opacity: 0.7;
+               font-family: Helvetica;
+               font-size: 24px;
+               color: #060606;
+               letter-spacing: 0;
+            }
+         }
+      }
+
+      .ads {
+         background-color: white;
+         margin-top: 20px;
+         padding-top: 25px;
+
+         img {
+            width: 100%;
+            transform: scale(1.01);
+         }
+
+         .commit {
+            display: flex;
+            justify-content: center;
+
+            .item {
+               display: flex;
+               width: 33%;
+               justify-content: center;
+
+               img {
+                  width: 12%;
+                  height: 80%;
+                  margin: 1% 2%;
+               }
+
+               p {
+                  opacity: 0.5;
+                  font-family: Helvetica;
+                  font-size: 22px;
+                  color: #060606;
+                  letter-spacing: 0;
+                  width: 60%;
+                  margin: 2% 0;
+               }
+            }
+         }
+
+         .hotSales {
+            text-align: center;
+            width: 94%;
+            margin: 0 auto;
+
+            .swipper {
+               margin: 0 auto;
+               overflow-x: scroll;
+               padding: 0% 2%;
+               display: flex;
+
+               .hotSaleCard {
+                  height: 22vh;
+                  width: 35%;
+                  padding: 20px;
+
+                  img {
+                     width: 230px;
+                  }
+
+                  p {
+                     opacity: 0.7;
+                     font-family: Helvetica;
+                     font-size: 24px;
+                     color: #000000;
+                     letter-spacing: 0;
+                     text-align: initial;
+                     margin: 0;
+                     width: 100%;
+                     overflow: hidden;
+                     text-overflow: ellipsis;
+                     white-space: nowrap;
+                  }
+
+                  .shoppingCart {
+                     display: flex;
+                     justify-content: space-between;
+
+                     .price {
+                        font-size: 0; // 使子标签之间没有空格
+
+                        p {
+                           font-family: Helvetica;
+                           font-size: 32px;
+                           color: #FDA535;
+                           letter-spacing: 0;
+                           margin: 0;
+                        }
+
+                        span {
+                           opacity: 0.5;
+                           font-family: Helvetica;
+                           font-size: 22px;
+                           color: #000000;
+                           letter-spacing: 0;
+                           text-decoration: line-through
+                        }
+                     }
+
+                     button {
+                        border: none;
+                        padding: 1vw;
+                        margin: auto 1%;
+                        border-radius: 12vw;
+                        height: 6vw;
+                        width: 6vw;
+                        background-image: linear-gradient(132deg, #FFC05A 0%, #FFAD46 100%);
+
+                        img {
+                           width: 4vw;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      .guessYouLike {
+         display: flex;
+
+         .allGoods {
+            margin: 3% 0;
+            width: 40%;
+            text-align: center;
+
+            p {
+               margin: 0;
+               text-align: center;
+               font-family: Helvetica;
+               font-size: 32px;
+               color: #45A418;
+               letter-spacing: 0;
+            }
+
+            button {
+               border: none;
+               background-image: linear-gradient(-45deg, #56AB2F 0%, #A8E063 100%);
+               border-radius: 40px;
+               color: white;
+               font-size: 20px;
+            }
+         }
+
+         .types {
+            margin: 0 auto;
+            overflow-x: scroll;
+            display: flex;
+
+            .type {
+               text-align: center;
+               margin: auto 2%;
+
+               p {
+                  // 抽离组件时可能会导致浏览器宽度识别问题
+                  width: 140px; // 要利用p标签撑开宽度！！！
+                  margin: 0;
+                  opacity: 0.7;
+                  font-family: Helvetica;
+                  font-size: 28px;
+                  color: #0B0B11;
+                  letter-spacing: 0;
+               }
+
+               span {
+                  opacity: 0.5;
+                  font-family: Helvetica;
+                  font-size: 20px;
+                  color: #000000;
+                  letter-spacing: 0;
+               }
+            }
+         }
+      }
+
+      .allLikeCards {
+         display: flex;
+         flex-flow: row wrap;
+         padding: 0 2%;
+
+         .allLikeCard {
+            background-color: white;
+            width: 45%;
+            margin: 0 0 2% 2%;
+            border-radius: 30px;
+            text-align: center;
+            padding: 1% 1%;
+
+            img {
+               width: 95%;
+            }
+
+            p {
+               opacity: 0.7;
+               font-family: Helvetica;
+               font-size: 28px;
+               color: #000000;
+               letter-spacing: 0;
+               margin: 0 4%;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               white-space: nowrap;
+            }
+
+            span {
+               opacity: 0.5;
+               font-family: Helvetica;
+               font-size: 22px;
+               color: #000000;
+               letter-spacing: 0;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               white-space: nowrap;
+               overflow: hidden;
+               width: 92%;
+               display: inline-block;
+            }
+
+            .shoppingCart {
+               display: flex;
+               justify-content: space-between;
+
+               p {
+                  margin: 6% 0;
+               }
+
+               button {
+                  border: none;
+                  padding: 1vw;
+                  margin: 3% 8%;
+                  border-radius: 12vw;
+                  height: 8vw;
+                  width: 8vw;
+                  background-image: linear-gradient(-45deg, #56AB2F 0%, #A8E063 100%);
+               }
+            }
+         }
+      }
+   }
+}

@@ -27,18 +27,23 @@ class PageModel extends LifeCycle<Params, Query>{
       ]
    @observable userInfo: {
       phone: string,
-      message: number,
+      message: string,
       id: number
    } = {
          phone: '15316059673',
-         message: 9673,
+         message: '0',
          id: 153
       }
-   @action getInputValue = (e: string) => {
-      console.log(e)
+   @action getInputValue = (e: string,type:string) => {
+      type === 'phone' ? this.userInfo.phone = e : this.userInfo.message = e;
+      console.log(this.userInfo)
+   }
+   @action Login = () => {
+      console.log(`发送电话和验证码给后端判断是否登陆成功`)
+      this.userInfo.message === '9673' ? this.onJump('home') : console.log(`验证失败`);
    }
    @action onJump = (route: string) => {
-      if (route === 'home') history.push('/home?userId=' + this.userInfo.id)
+      if (route === 'home') history.push('/home/intro?userId=' + this.userInfo.id)
    }
 }
 

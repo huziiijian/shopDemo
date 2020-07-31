@@ -6,7 +6,7 @@ const Input: React.FC<{
    placeholder: string,
    message: string,
    type: string,
-   getInputValue: (e: string) => void
+   getInputValue: (e: string, type:string) => void
 }> = (props) => {
 
    return (
@@ -14,7 +14,7 @@ const Input: React.FC<{
          <div className={style[`${props.type}Icon`]} />
          <div className={style.inputArea}>
             <input className={style.inputBox} placeholder={props.placeholder}
-               onChange={(e) => props.getInputValue(e.target.value)} />
+               onChange={(e) => props.getInputValue(e.target.value,props.type)} />
             {props.message ? <span className={style.message} onClick={() => console.log(props.message)}>
                {props.message}</span> : null}
          </div>

@@ -1,18 +1,36 @@
-import React, {FC} from "react";
+import React, { FC } from "react";
 import { observer } from "mobx-react";
 
 
 
 import Model from '../model'
 interface Props {
-    store: Model
+   store: Model
 }
 
-const View:FC<Props> = observer((props) => {
+const View: FC<Props> = observer((props) => {
 
-    return (
-    <div>base</div>
-    );
+   function onChange() {
+      console.log('a, b, c');
+   }
+   console.log('sort')
+
+   return (
+      <div>
+         <p>dd</p>
+         <p>dd</p>
+         <p>dd</p>
+         <p>dd</p>
+         <p>dd</p>
+         <p>dd</p>
+         <p>dd</p>
+         <p>dd</p>
+         <p>dd</p>
+         <p>dd</p>
+         <p>dd</p>
+         <p>dd</p>
+      </div>
+   );
 })
 
 export default View;

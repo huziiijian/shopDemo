@@ -12,7 +12,6 @@ interface Props {
 
 const View: FC<Props> = observer((props) => {
 
-   console.log(props)
 
    return (
       <div className={style.login}>
@@ -24,7 +23,7 @@ const View: FC<Props> = observer((props) => {
                key={item.type} getInputValue={props.store.getInputValue} />)}
          </div>
          <div className={style.click}>
-            <button className={style.login} onClick={() => props.store.onJump('home')}>登录</button>
+            <button className={style.login} onClick={props.store.Login}>登录</button>
             <p>其他方式登录</p>
             <div className={style.otherWay}>
                <button className={style.weChat} onClick={() => console.log('微信登录')} />

@@ -17,8 +17,6 @@ interface Props {
 
 const View: FC<Props> = observer((props) => {
 
-
-
    return (
       <div className={style.home}>
          <div className={style.showContent}>
