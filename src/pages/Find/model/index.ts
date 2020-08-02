@@ -16,7 +16,28 @@ class PageModel extends LifeCycle <Params, Query>{
         super(props)
 
     }
-    @observable showLoading = true
+    @observable showLoading = true;
+    @observable cardInfo: Array<{
+      id: number
+      imgUrl: string,
+      title: string
+    }> = [{
+      id: 1,
+      imgUrl: 'https://image-c.weimobwmc.com/wrz/a22b288c160c497a9674e1b870aff995.png',
+      title: '单独独立包装 厄瓜多尔进口自营生鲜水果'
+    },{
+      id: 2,
+      imgUrl: 'https://image-c.weimobwmc.com/wrz/7b6889df8c0a4072aa147be6624678ca.png',
+      title: '单独独立包装 厄瓜多尔进口自营生鲜水果'
+    },{
+      id: 3,
+      imgUrl: 'https://image-c.weimobwmc.com/wrz/a22b288c160c497a9674e1b870aff995.png',
+      title: '单独独立包装 厄瓜多尔进口自营生鲜水果'
+    },{
+      id: 4,
+      imgUrl: 'https://image-c.weimobwmc.com/wrz/7b6889df8c0a4072aa147be6624678ca.png',
+      title: '单独独立包装 厄瓜多尔进口自营生鲜水果'
+    }]
 }
 
 

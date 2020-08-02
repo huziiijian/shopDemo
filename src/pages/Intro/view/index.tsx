@@ -5,7 +5,7 @@ import style from '../style/index.less'
 import Services from './services'
 import SaleCard from './hotSaleCard'
 import GuessLike from './guessLikes'
-import GuessLikeCards from './guessLikeCards'
+import GuessLikeCards from '../../../components/LikeCrads/Card'
 interface Props {
    store: Model
 }

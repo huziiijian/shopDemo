@@ -1,0 +1,151 @@
+.shoppingCart {
+   // css多背景
+   background: url(https://image-c.weimobwmc.com/wrz/0331e09782fe42efb8f746a2054cead2.png) center top no-repeat,
+      url(https://image-c.weimobwmc.com/wrz/585cd4aeb4c249a3b4a0cea9b2cb051d.png) center bottom;
+
+   .title {
+      display: flex;
+
+      .carts {
+         margin: 8% auto 5% auto;
+         width: 15%;
+         font-family: Helvetica;
+         font-size: 36px;
+         color: #FFFFFF;
+         letter-spacing: 0;
+      }
+
+      .edit {
+         position: absolute;
+         right: 4%;
+         top: 5%;
+         font-family: Helvetica;
+         font-size: 30px;
+         color: #FFFFFF;
+         letter-spacing: 0;
+      }
+   }
+
+   .cards {
+      border-radius: 30px;
+      margin: 2% auto;
+      width: 94%;
+      background-color: white;
+
+      .card {
+         display: flex;
+         padding: 1% 3% 5% 2%;
+
+         .selected {
+            background: url(https://image-c.weimobwmc.com/wrz/9d7c3aab316c4aa7a7844b1c47b7685d.png) center top no-repeat;
+            background-size: 6vw;
+            border: solid 0.5vw transparent;
+            height: 6vw;
+            width: 6vw;
+            border-radius: 90px;
+            margin: auto 2%;
+         }
+
+         .unSelected {
+            border: solid 0.5vw grey;
+            background: white;
+            height: 6vw;
+            width: 6vw;
+            border-radius: 90px;
+            margin: auto 2%;
+         }
+
+         .pic {
+            width: 30%;
+            margin: auto 2%;
+         }
+
+         .title {
+            opacity: 0.7;
+            font-family: Helvetica;
+            font-size: 32px;
+            color: #000000;
+            letter-spacing: 0;
+            margin-bottom: 0;
+         }
+
+         .info {
+            opacity: 0.5;
+            font-family: Helvetica;
+            font-size: 22px;
+            color: #000000;
+            letter-spacing: 0;
+         }
+
+         .select {
+            display: flex;
+            justify-content: space-between;
+
+            .priceShow {
+               .price {
+                  font-family: Helvetica;
+                  font-size: 40px;
+                  color: #45A418;
+                  letter-spacing: 0;
+               }
+
+               .unit {
+                  opacity: 0.4;
+                  font-family: Helvetica;
+                  font-size: 22px;
+                  color: #000000;
+                  letter-spacing: 0;
+               }
+            }
+
+            .selectNum {
+               display: flex;
+               width: 30%;
+               justify-content: space-around;
+
+               .minus {
+                  margin: auto 0;
+                  background: url(https://image-c.weimobwmc.com/wrz/e8ab9eaa6e7c45358da73d1e9eadaaab.png) center top no-repeat;
+                  background-size: 4.5vw;
+                  border: solid 0.5vw transparent;
+                  height: 5vw;
+                  width: 5vw;
+                  border-radius: 90px;
+               }
+
+               .num {
+                  margin: auto 2%;
+               }
+
+               .add {
+                  margin: auto 0;
+                  background: url(https://image-c.weimobwmc.com/wrz/bcc63f5effb94821954ea4f022242234.png) center top no-repeat;
+                  background-size: 4.5vw;
+                  border: solid 0.5vw transparent;
+                  height: 5vw;
+                  width: 5vw;
+                  border-radius: 90px;
+               }
+            }
+         }
+      }
+   }
+
+   .guessYouLike {
+      display: flex;
+      justify-content: start;
+
+      .pic {
+         width: 8%;
+         margin: 5% 2% 2% 6%;
+      }
+
+      .word {
+         font-family: Helvetica;
+         font-size: 32px;
+         color: #45A418;
+         letter-spacing: 0;
+         margin: 6% 0 0 0;
+      }
+   }
+}

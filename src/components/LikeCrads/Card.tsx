@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import style from '../style/index.less'
+import style from './style/index.less'
 
 
 const Card: FC<{
