@@ -1,0 +1,93 @@
+.sort {
+   background-color: white;
+   overflow-x: scroll;
+
+   .search {
+      background: url(https://image-c.weimobwmc.com/wrz/abd255a6dbbd4f24b996c4d13ab5432a.png) no-repeat center;
+      background-position: 45% 50%;
+      background-size: 6%;
+      border: none;
+      border-radius: 90px;
+      font-size: 5vw;
+      background-color: #F5F6F7;
+      height: 8vw;
+      width: 90%;
+      margin: 5% 4% 2% 4%;
+   }
+
+   .Sales {
+      display: flex;
+      margin: 3% 0;
+
+      .type {
+         text-align: center;
+
+         .focusItem {
+            background: #FFFFFF;
+            height: 7.5vh;
+            width: 23vw;
+            opacity: 0.7;
+            font-family: Helvetica;
+            font-size: 28px;
+            color: #000000;
+            letter-spacing: 0;
+            display: flex;
+            line-height: 7.5vh;
+            border-left: solid 3px #56AB2F;
+
+            .word {
+               margin: 0 auto;
+            }
+         }
+
+         .unFocusItem {
+            .focusItem;
+            background: #f1efef;
+            border-left: solid 3px transparent;
+            .focusItem.word;
+         }
+      }
+
+      .show {
+         padding: 3%;
+
+         .buttons {
+            width: 100vw;
+            display: flex;
+            overflow-x: scroll;
+
+            .focusItem {
+               border: solid 2px #56AB2F;
+               background-color: #FFFFFF;
+               border-radius: 90px;
+               font-family: Helvetica;
+               margin: 0 3% 3% 0;
+               padding: 1%;
+
+               .word {
+                  width: 14vw;
+                  margin: 0;
+                  font-size: 24px;
+                  color: #45A418;
+                  letter-spacing: 0;
+               }
+            }
+
+            .unFocusItem {
+               .focusItem;
+               opacity: 0.4;
+               border: 2px solid #000000;
+
+               .word {
+                  .focusItem.word;
+                  opacity: 0.4;
+                  font-family: Helvetica;
+                  font-size: 24px;
+                  color: #000000;
+                  letter-spacing: 0;
+               }
+            }
+         }
+      }
+   }
+}
