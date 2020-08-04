@@ -16,6 +16,10 @@ let RouteConfig: Array<{
       {
          path: '/orders',
          component: AsyncComponent(() => import('src/pages/Orders'))
+      },
+      {
+         path: '/balance',
+         component: AsyncComponent(() => import('src/pages/balance'))
       }
    ];
 

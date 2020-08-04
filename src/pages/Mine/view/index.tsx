@@ -33,7 +33,7 @@ const View: FC<Props> = observer((props) => {
                </div>
             </div>
             <div className={style.profit}>
-               <div className={style.item}>
+               <div className={style.item} onClick={()=>props.store.onJump('balance')}>
                   <p className={style.num}>0</p>
                   <p className={style.word}>余额</p>
                </div>

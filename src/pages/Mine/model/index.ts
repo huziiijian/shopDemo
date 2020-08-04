@@ -100,6 +100,7 @@ class PageModel extends LifeCycle<Params, Query>{
    }];
    @action onJump = (route:string) => {
       if (route === 'orders') history.push('/orders')
+      if(route === 'balance') history.push('/balance')
    }
 }
 
