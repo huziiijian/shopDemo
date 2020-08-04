@@ -10,6 +10,7 @@ import LifeCycle, { LifeCycleProps } from 'src/utils/VM/lifeCycle'
 interface Params {
 }
 interface Query {
+   title:string
 }
 class PageModel extends LifeCycle<Params, Query>{
    constructor(props: LifeCycleProps<Params, Query>) {
@@ -17,6 +18,7 @@ class PageModel extends LifeCycle<Params, Query>{
 
    }
    @observable showLoading = true;
+   @observable title:string = this.$ctx.getQuery().title || '上海千库分店1';
    @observable typeInfo: {
       id: number,
       imgUrl: string,
@@ -150,50 +152,53 @@ class PageModel extends LifeCycle<Params, Query>{
       info: '补充能量'
    },
       ];
-      @observable allLikeCards: Array<{
-         id: number
-         imgUrl: string,
-         title: string,
-         intro: string,
-         price: number
-      }> = [{
-         id: 1,
-         imgUrl: 'https://image-c.weimobwmc.com/wrz/dcc75c9ca80f4f08b42eb637ba56799c.png',
-         title: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
-         intro: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
-         price: 34
-      }, {
-         id: 2,
-         imgUrl: 'https://image-c.weimobwmc.com/wrz/d29b316000b34e419f6f8ff1578f727e.png',
-         title: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
-         intro: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
-         price: 34
-      }, {
-         id: 3,
-         imgUrl: 'https://image-c.weimobwmc.com/wrz/75fe9ac7e0684d6f8353c45fe64f20b8.png',
-         title: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
-         intro: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
-         price: 34
-      }, {
-         id: 4,
-         imgUrl: 'https://image-c.weimobwmc.com/wrz/75fe9ac7e0684d6f8353c45fe64f20b8.png',
-         title: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
-         intro: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
-         price: 34
-      }, {
-         id: 5,
-         imgUrl: 'https://image-c.weimobwmc.com/wrz/dcc75c9ca80f4f08b42eb637ba56799c.png',
-         title: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
-         intro: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
-         price: 34
-      }, {
-         id: 6,
-         imgUrl: 'https://image-c.weimobwmc.com/wrz/dcc75c9ca80f4f08b42eb637ba56799c.png',
-         title: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
-         intro: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
-         price: 34
-      }
-         ]
+   @observable allLikeCards: Array<{
+      id: number
+      imgUrl: string,
+      title: string,
+      intro: string,
+      price: number
+   }> = [{
+      id: 1,
+      imgUrl: 'https://image-c.weimobwmc.com/wrz/dcc75c9ca80f4f08b42eb637ba56799c.png',
+      title: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
+      intro: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
+      price: 34
+   }, {
+      id: 2,
+      imgUrl: 'https://image-c.weimobwmc.com/wrz/d29b316000b34e419f6f8ff1578f727e.png',
+      title: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
+      intro: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
+      price: 34
+   }, {
+      id: 3,
+      imgUrl: 'https://image-c.weimobwmc.com/wrz/75fe9ac7e0684d6f8353c45fe64f20b8.png',
+      title: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
+      intro: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
+      price: 34
+   }, {
+      id: 4,
+      imgUrl: 'https://image-c.weimobwmc.com/wrz/75fe9ac7e0684d6f8353c45fe64f20b8.png',
+      title: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
+      intro: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
+      price: 34
+   }, {
+      id: 5,
+      imgUrl: 'https://image-c.weimobwmc.com/wrz/dcc75c9ca80f4f08b42eb637ba56799c.png',
+      title: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
+      intro: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
+      price: 34
+   }, {
+      id: 6,
+      imgUrl: 'https://image-c.weimobwmc.com/wrz/dcc75c9ca80f4f08b42eb637ba56799c.png',
+      title: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
+      intro: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
+      price: 34
+   }
+      ];
+   @action onJump = (route: string) => {
+      if (route === 'stores') history.push('/stores');
+   }
 }
 
 

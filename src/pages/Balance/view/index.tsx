@@ -72,19 +72,12 @@ const View: FC<Props> = observer((props) => {
             </div>
             <div className={style.Agree}>
                <input type='radio' checked={check} onClick={() => setCheck(!check)}
-                onChange={() => null} />
+                  onChange={() => null} />
                <span className={style.agree}>阅读并同意</span>
                <span className={style.contract}>《千库网购买协议》</span>
             </div>
          </div>
-            {/* <div className={style.Confirm}>
-               <div className={style.money}>
-                  <span className={style.words}>支付金额</span>
-                  <span className={style.price}>￥50</span>
-               </div>
-               <button className={style.confirm}>确认购买</button>
-            </div> */}
-            <Confirm price={50} info={'确认购买'}/>
+         <Confirm price={'50'} info={'确认购买'} />
       </div>
    );
 })

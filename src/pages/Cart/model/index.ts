@@ -27,8 +27,8 @@ class PageModel extends LifeCycle <Params, Query>{
     }> = [{
       id: 1,
       imgUrl: 'https://image-c.weimobwmc.com/wrz/dcc75c9ca80f4f08b42eb637ba56799c.png',
-      title: '手剥橙子生鲜薄皮橙子新西兰',
-      info:'手剥橙子生鲜薄皮橙子新西兰',
+      title: '手剥橙子生鲜薄皮橙子新西兰feff',
+      info:'手剥橙子生鲜薄皮橙子新西兰r3r3',
       price:34,
       unit:'盒'
     },{
@@ -62,13 +62,13 @@ class PageModel extends LifeCycle <Params, Query>{
    }> = [{
       id: 1,
       imgUrl: 'https://image-c.weimobwmc.com/wrz/dcc75c9ca80f4f08b42eb637ba56799c.png',
-      title: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
-      intro: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
+      title: '手剥橙子生鲜薄皮好吃又便宜f，欢迎品rfrf尝',
+      intro: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝frfr',
       price: 34
    }, {
       id: 2,
       imgUrl: 'https://image-c.weimobwmc.com/wrz/d29b316000b34e419f6f8ff1578f727e.png',
-      title: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
+      title: '手剥橙子生鲜薄皮好吃又便宜，欢迎品frf尝',
       intro: '手剥橙子生鲜薄皮好吃又便宜，欢迎品尝',
       price: 34
    }, {

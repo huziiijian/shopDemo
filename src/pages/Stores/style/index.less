@@ -1,0 +1,85 @@
+.stores {
+   background-color: white;
+
+   .title {
+      display: flex;
+      border-bottom: solid 0.5vw #0000001f;
+
+      .img {
+         width: 6%;
+         height: 8%;
+         margin: auto 1%;
+      }
+
+      .word {
+         font-family: Helvetica;
+         font-size: 40px;
+         color: #060606;
+         letter-spacing: 0;
+         margin: 5% 20% 5% 30%;
+      }
+   }
+
+   .cards {
+      background-color: #0000001f;
+      height: 90vh;
+      overflow: scroll;
+
+      .card {
+         text-align: center;
+         margin-bottom: 5%;
+         padding: 5%;
+         background-color: white;
+
+         .img {
+            border-radius: 10px;
+            width: 100%;
+         }
+
+         .info {
+            display: flex;
+            justify-content: space-between;
+
+            .words {
+               .title {
+                  font-family: Helvetica;
+                  font-size: 32px;
+                  color: #000000;
+                  letter-spacing: 0;
+                  margin: 2%;
+                  border-bottom: none;
+               }
+
+               .word {
+                  opacity: 0.5;
+                  font-family: Helvetica;
+                  font-size: 24px;
+                  color: #000000;
+                  letter-spacing: 0;
+                  margin: 2% 0;
+               }
+            }
+
+            .distanceInfo {
+               display: flex;
+               width: 18%;
+               margin: auto 0;
+
+               .icon {
+                  width: 35%;
+                  margin: auto 2%;
+               }
+
+               .distance {
+                  opacity: 0.5;
+                  font-family: Helvetica;
+                  font-size: 28px;
+                  color: #000000;
+                  letter-spacing: 0;
+                  margin: auto 0;
+               }
+            }
+         }
+      }
+   }
+}

@@ -4,7 +4,6 @@ let RouteConfig: Array<{
    path: string,
    component: any
 }> = [
-
       {
          path: '/home',
          component: AsyncComponent(() => import('src/pages/Home')),
@@ -19,7 +18,15 @@ let RouteConfig: Array<{
       },
       {
          path: '/balance',
-         component: AsyncComponent(() => import('src/pages/balance'))
+         component: AsyncComponent(() => import('src/pages/Balance'))
+      },
+      {
+         path: '/confirmOrder',
+         component: AsyncComponent(() => import('src/pages/ConfirmOrder'))
+      },
+      {
+         path: '/stores',
+         component: AsyncComponent(() => import('src/pages/Stores'))
       }
    ];
 

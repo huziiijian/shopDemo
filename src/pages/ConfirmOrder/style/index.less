@@ -1,0 +1,190 @@
+.confirmOrder {
+   background-color: #0000000a;
+   font-size: 0;
+
+   .title {
+      display: flex;
+      background-color: white;
+
+      .img {
+         width: 6%;
+         height: 8%;
+         margin: 5% 1% 3% 1%;
+      }
+
+      .word {
+         font-family: Helvetica;
+         font-size: 40px;
+         color: #060606;
+         letter-spacing: 0;
+         margin: 5% 20% 3% 35%;
+      }
+   }
+
+   .addAddress {
+      display: flex;
+      margin: 1% 0;
+      background-color: white;
+      justify-content: space-between;
+      padding-left: 2%;
+
+      .img {
+         width: 4%;
+         height: 8%;
+         margin: 5% 1% 3% 1%;
+      }
+
+      .info {
+         display: flex;
+
+         .img {
+            width: 7%;
+            height: 40%;
+         }
+
+         .word {
+            font-family: Helvetica;
+            font-size: 32px;
+            color: #060606;
+            letter-spacing: 0;
+         }
+      }
+   }
+
+   .addTime {
+      .addAddress;
+      margin: 5% 0 3% 0;
+      justify-content: space-between;
+
+      .img {
+         .img;
+      }
+
+      .infoLeft {
+         display: flex;
+         justify-content: flex-start;
+
+         .img {
+            width: 9%;
+            height: 36%;
+            margin: auto 3%;
+         }
+
+         .word {
+            font-family: Helvetica;
+            font-size: 32px;
+            color: #060606;
+            letter-spacing: 0;
+            margin: 7% 0;
+         }
+      }
+
+      .infoRight {
+         .infoLeft;
+         justify-content: flex-end;
+
+         .word {
+            .word;
+            font-size: 26px;
+            color: #4AA61F;
+            margin: auto 0;
+         }
+      }
+   }
+
+   .goods {
+      margin: 3% 1.5% 3% 3%;
+      display: flex;
+      justify-content: space-between;
+
+      .imgs {
+         display: flex;
+         width: 290vw;
+         overflow-x: scroll;
+
+         .img {
+            width: 26%;
+            margin: 0 1%;
+         }
+      }
+
+      .numInfo {
+         display: flex;
+         justify-content: flex-end;
+         margin-left: 1vw;
+
+         .span {
+            margin: auto 0;
+            opacity: 0.7;
+            font-family: Helvetica;
+            font-size: 28px;
+            color: #000000;
+            letter-spacing: 0;
+            text-align: right;
+         }
+
+         .img {
+            margin: auto 0;
+            width: 26%;
+            height: 24%;
+         }
+      }
+   }
+
+   .totalPrice {
+      background-color: white;
+      display: flex;
+      justify-content: flex-end;
+      padding: 2% 4%;
+      margin-bottom: 2%;
+
+      .word {
+         opacity: 0.7;
+         font-family: Helvetica;
+         font-size: 28px;
+         color: #3E3836;
+         letter-spacing: 0;
+      }
+
+      .price {
+         font-family: Helvetica;
+         font-size: 40px;
+         color: #4AA61F;
+         letter-spacing: 0;
+      }
+   }
+
+   .addInvoice {
+      .addAddress;
+      margin: 5% 0 61% 0;
+      justify-content: space-between;
+      padding: 0 1% 0 4%;
+
+      .word {
+         opacity: 0.5;
+         font-family: Helvetica;
+         font-size: 28px;
+         color: #1D1D1D;
+         letter-spacing: 0;
+         margin: 3% 0;
+      }
+
+      .infoRight {
+         display: flex;
+         justify-content: flex-end;
+
+         .word {
+            font-family: Helvetica;
+            font-size: 32px;
+            color: #1D1D1D;
+            letter-spacing: 0;
+            margin: auto 0;
+         }
+
+         .img {
+            width: 6%;
+            height: 36%;
+         }
+      }
+   }
+}

@@ -64,10 +64,6 @@ class PageModel extends LifeCycle<Params, Query>{
          {
             id: 11,
             title: '保健用品'
-         },
-         {
-            id: 12,
-            title: '工艺创造'
          }
       ];
    @observable selected: Array<{

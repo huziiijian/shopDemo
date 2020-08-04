@@ -25,8 +25,8 @@ const View: FC<Props> = observer((props) => {
             <div className={style.carousel}>
             </div>
             <div className={style.switchShop}>
-               <p>千库网上海分店</p>
-               <span>切换门店</span>
+               <p>{props.store.title}</p>
+               <span onClick={()=>props.store.onJump('stores')}>切换门店</span>
                <img src='https://image-c.weimobwmc.com/wrz/bb87bbb6046c46fc8edf6c9f70435adf.png' />
             </div>
          </div>

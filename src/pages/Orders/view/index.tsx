@@ -43,7 +43,6 @@ const View: FC<Props> = observer((props) => {
                </p>
             </div>
          </div>
-         <div style={{ height: '16vh' }}></div>
          <div className={style.cards}>
             {props.store.cardsInfo.map((item) =>
                <Card cardInfo={item} key={item.id} status={status} />)}

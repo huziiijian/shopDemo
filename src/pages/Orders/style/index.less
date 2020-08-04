@@ -3,13 +3,10 @@
 
    .header {
       background-color: white;
-      position: fixed;
-      z-index: 3;
       width: 100%;
 
       .title {
          display: flex;
-         padding-bottom: 4%;
          border-bottom: solid 2px gainsboro;
 
          .img {
@@ -23,7 +20,7 @@
             font-size: 40px;
             color: #060606;
             letter-spacing: 0;
-            margin: 5% 20% 0 30%;
+            margin: 5% 20% 5% 30%;
          }
       }
 
@@ -56,7 +53,8 @@
    }
 
    .cards {
-      overflow: hidden;
+      overflow: scroll;
+      height: 82vh;
       .card {
          margin-top: 3%;
 
@@ -99,6 +97,7 @@
                   font-family: Helvetica;
                   font-size: 28px;
                   color: #000000;
+                  display: block; // 注意有时候要给P标签block才会让文字正常省略
                   letter-spacing: 0;
                   overflow: hidden;
                   text-overflow: ellipsis;

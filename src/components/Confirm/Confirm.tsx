@@ -3,7 +3,7 @@ import style from './style/index.less';
 
 
 const Confirm: React.FC<{
-   price:number,
+   price:string,
    info:string
 }> = (props) => {
 

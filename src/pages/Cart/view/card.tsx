@@ -28,9 +28,9 @@ const Card: FC<{
                onClick={() => setSelect(!select)} />
             <img className={style.pic}
                src={props.imgUrl} />
-            <div>
+            <div className={style.Info}>
                <p className={style.title}>{props.title}</p>
-               <p className={style.info}>{props.title}</p>
+               <p className={style.info}>{props.info}</p>
                <div className={style.select}>
                   <div className={style.priceShow}>
                      <span className={style.price}>{`￥${props.price}`}</span>
