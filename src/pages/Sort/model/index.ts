@@ -154,7 +154,7 @@ class PageModel extends LifeCycle<Params, Query>{
       this.selected = this.selected.map((item) => {
          return {
             id: item.id,
-            selected: item.id === id ? true : false
+            selected: item.id === id
          }
       })
    }

@@ -26,7 +26,7 @@ const View: FC<Props> = observer((props) => {
             <Route path="/home/cart" component={Cart} />
             <Route path="/home/mine" component={Mine} />
          </div>
-         <NavBar />
+         <NavBar route={props.store.route} setRoute={props.store.setRoute}/>
       </div>
    );
 })

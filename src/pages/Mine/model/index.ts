@@ -97,7 +97,10 @@ class PageModel extends LifeCycle<Params, Query>{
       id:12,
       imgUrl: 'https://image-c.weimobwmc.com/wrz/fda0c3931b6e4c9786876321a68f1452.png',
       info: '签到得红包'
-   }]
+   }];
+   @action onJump = (route:string) => {
+      if (route === 'orders') history.push('/orders')
+   }
 }
 
 

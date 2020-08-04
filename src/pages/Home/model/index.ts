@@ -15,8 +15,8 @@ interface Query {
 class PageModel extends LifeCycle<Params, Query>{
    constructor(props: LifeCycleProps<Params, Query>) {
       super(props)
-   console.log(this.$ctx.getParams().route)
    }
+   @observable route = history.location.pathname;
    @observable showLoading = true;
    @observable inputConfig: {
       placeholder: string,
@@ -25,7 +25,10 @@ class PageModel extends LifeCycle<Params, Query>{
    }[] = [
          { placeholder: '请输入手机号', type: 'phone', message: '获取验证码' },
          { placeholder: '请输入验证码', type: 'message', message: '' }
-      ]
+      ];
+      @action setRoute = (route:string) => {
+         this.route = route;
+      }
 }
 
 

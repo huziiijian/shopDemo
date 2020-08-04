@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import style from '../style/index.less'
 import { Link } from 'react-router-dom'
 
 const navBar: React.FC<{
+   route:string,
+   setRoute:(route:string)=>void
 }> = (props) => {
 
-   const [route, setRoute] = useState('intro');
    const imgURL: {unSelected:string,isSelected:string}[] = [
       {unSelected:'https://image-c.weimobwmc.com/wrz/9d0a34ccc1cb486da936a85c89c0e243.png',
       isSelected:'https://image-c.weimobwmc.com/wrz/06627fb59fb9452683d4c33f92d28866.png'},
@@ -21,29 +22,29 @@ const navBar: React.FC<{
 
    return (
       <div className={style.navBar}>
-         <Link onClick={() => setRoute('intro')}
-            className={route != 'intro' ? style.navItem : style.isSelected} to="/home/intro">
-            <img src={route != 'intro' ? imgURL[0].unSelected : imgURL[0].isSelected }/>
+         <Link onClick={() => props.setRoute('/home/intro')}
+            className={props.route != '/home/intro' ? style.navItem : style.isSelected} to="/home/intro">
+            <img src={props.route != '/home/intro' ? imgURL[0].unSelected : imgURL[0].isSelected }/>
             <p>首页</p>
          </Link>
-         <Link onClick={() => setRoute('sort')}
-            className={route != 'sort' ? style.navItem : style.isSelected} to="/home/Sort">
-            <img src={route != 'sort' ? imgURL[1].unSelected : imgURL[1].isSelected }/>
+         <Link onClick={() => props.setRoute('/home/Sort')}
+            className={props.route != '/home/Sort' ? style.navItem : style.isSelected} to="/home/Sort">
+            <img src={props.route != '/home/Sort' ? imgURL[1].unSelected : imgURL[1].isSelected }/>
             <p>分类</p>
          </Link>
-         <Link onClick={() => setRoute('find')}
-            className={route != 'find' ? style.navItem : style.isSelected} to="/home/find">
-            <img src={route != 'find' ? imgURL[2].unSelected : imgURL[2].isSelected }/>
+         <Link onClick={() => props.setRoute('/home/find')}
+            className={props.route != '/home/find' ? style.navItem : style.isSelected} to="/home/find">
+            <img src={props.route != '/home/find' ? imgURL[2].unSelected : imgURL[2].isSelected }/>
             <p>发现</p>
          </Link>
-         <Link onClick={() => setRoute('cart')}
-            className={route != 'cart' ? style.navItem : style.isSelected} to="/home/cart">
-            <img src={route != 'cart' ? imgURL[3].unSelected : imgURL[3].isSelected }/>
+         <Link onClick={() => props.setRoute('/home/cart')}
+            className={props.route != '/home/cart' ? style.navItem : style.isSelected} to="/home/cart">
+            <img src={props.route != '/home/cart' ? imgURL[3].unSelected : imgURL[3].isSelected }/>
             <p>购物车</p>
          </Link>
-         <Link onClick={() => setRoute('mine')}
-            className={route != 'mine' ? style.navItem : style.isSelected} to="/home/mine">
-            <img src={route != 'mine' ? imgURL[4].unSelected : imgURL[4].isSelected }/>
+         <Link onClick={() => props.setRoute('/home/mine')}
+            className={props.route != '/home/mine' ? style.navItem : style.isSelected} to="/home/mine">
+            <img src={props.route != '/home/mine' ? imgURL[4].unSelected : imgURL[4].isSelected }/>
             <p>我的</p>
          </Link>
       </div>

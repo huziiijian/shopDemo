@@ -52,7 +52,7 @@ const View: FC<Props> = observer((props) => {
          <Orders orderLists={props.store.orderLists}>
             <div className={style.title}>
                <p className={style.myOrder}>我的订单</p>
-               <p className={style.viewOrders}>查看全部订单</p>
+               <p className={style.viewOrders} onClick={()=>props.store.onJump('orders')}>查看全部订单</p>
             </div>
          </Orders>
          <Service serviceLists={props.store.serviceLists}>
