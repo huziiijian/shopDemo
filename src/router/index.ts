@@ -27,6 +27,10 @@ let RouteConfig: Array<{
       {
          path: '/stores',
          component: AsyncComponent(() => import('src/pages/Stores'))
+      },
+      {
+         path: '/goodInfo',
+         component: AsyncComponent(() => import('src/pages/GoodInfo'))
       }
    ];
 

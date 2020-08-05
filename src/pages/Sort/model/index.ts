@@ -154,6 +154,9 @@ class PageModel extends LifeCycle<Params, Query>{
          }
       })
    }
+   @action onJump = (key:string) => {
+      if (key === 'goodInfo') history.push('/goodInfo')
+   }
 }
 
 

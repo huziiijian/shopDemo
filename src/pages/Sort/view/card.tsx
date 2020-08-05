@@ -6,12 +6,13 @@ const Card: FC<{
    title: string,
    words: string,
    price: number,
-   unit: string
+   unit: string,
+   onJump: (key:string)=>void
 }> = (props) => {
 
 
    return (
-      <div className={style.card}>
+      <div className={style.card} onClick={()=>props.onJump('goodInfo')}>
          <img className={style.img} src={props.imgUrl} />
          <div className={style.info}>
             <p className={style.title}>{props.title}</p>

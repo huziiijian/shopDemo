@@ -28,7 +28,7 @@ const View: FC<Props> = observer((props) => {
                <div className={style.goods}>
                   {props.store.cardsInfo.map((item) =>
                      <Card imgUrl={item.imgUrl} title={item.title} words={item.words}
-                        price={item.price} unit={item.unit} key={item.id} />)}
+                        price={item.price} unit={item.unit} onJump={props.store.onJump}  key={item.id} />)}
                </div>
             </div>
          </div>
