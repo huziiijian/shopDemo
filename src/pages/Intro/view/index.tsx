@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { observer } from "mobx-react";
 import Model from '../model'
 import style from '../style/index.less'
@@ -6,11 +6,13 @@ import Services from './services'
 import SaleCard from './hotSaleCard'
 import GuessLike from './guessLikes'
 import GuessLikeCards from '../../../components/LikeCrads/Card'
+import Carousel from './carousel'
 interface Props {
    store: Model
 }
 
 const View: FC<Props> = observer((props) => {
+
 
    return (
       <div className={style.intro}>
@@ -22,11 +24,10 @@ const View: FC<Props> = observer((props) => {
                   src='https://image-c.weimobwmc.com/wrz/e0e76c8fef8c4c7ea16dcbde757d99c4.png' />
                <input placeholder={'      搜索商家或商品名称'} className={style.search} />
             </div>
-            <div className={style.carousel}>
-            </div>
+            <Carousel imgUrl={props.store.imgUrl}/>
             <div className={style.switchShop}>
                <p>{props.store.title}</p>
-               <span onClick={()=>props.store.onJump('stores')}>切换门店</span>
+               <span onClick={() => props.store.onJump('stores')}>切换门店</span>
                <img src='https://image-c.weimobwmc.com/wrz/bb87bbb6046c46fc8edf6c9f70435adf.png' />
             </div>
          </div>
@@ -58,7 +59,7 @@ const View: FC<Props> = observer((props) => {
                <button>猜你喜欢</button>
             </div>
          </GuessLike>
-         <GuessLikeCards allLikeCards={props.store.allLikeCards}/>
+         <GuessLikeCards allLikeCards={props.store.allLikeCards} />
       </div>
    );
 })

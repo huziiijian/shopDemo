@@ -11,7 +11,6 @@ interface Props {
 
 const View: FC<Props> = observer((props) => {
 
-   const [focus, setFocus] = useState(1);
    const [check, setCheck] = useState(false)
 
    return (
@@ -53,31 +52,31 @@ const View: FC<Props> = observer((props) => {
          <div className={style.activity}>
             <div className={style.title}>充值享折扣</div>
             <div className={style.cards}>
-               <div className={focus === 1 ? style.cardFocus : style.card}
-                  onClick={() => setFocus(1)}>
+               <div className={props.store.type === 1 ? style.cardFocus : style.card}
+                  onClick={() => props.store.type = 1}>
                   <p className={style.words}>充值19得20</p>
                </div>
-               <div className={focus === 2 ? style.cardFocus : style.card}
-                  onClick={() => setFocus(2)}>
+               <div className={props.store.type === 2 ? style.cardFocus : style.card}
+                  onClick={() => props.store.type = 2}>
                   <p className={style.words}>充值50得60</p>
                </div>
-               <div className={focus === 3 ? style.cardFocus : style.card}
-                  onClick={() => setFocus(3)}>
+               <div className={props.store.type === 3 ? style.cardFocus : style.card}
+                  onClick={() => props.store.type = 3}>
                   <p className={style.words}>充值80得100</p>
                </div>
-               <div className={focus === 4 ? style.cardFocus : style.card}
-                  onClick={() => setFocus(4)}>
+               <div className={props.store.type === 4 ? style.cardFocus : style.card}
+                  onClick={() => props.store.type = 4}>
                   <p className={style.words}>充值150得200</p>
                </div>
             </div>
-            <div className={style.Agree}>
-               <input type='radio' checked={check} onClick={() => setCheck(!check)}
+            <div className={style.Agree} onClick={() => setCheck(!check)}>
+               <input type='radio' checked={check} 
                   onChange={() => null} />
                <span className={style.agree}>阅读并同意</span>
                <span className={style.contract}>《千库网购买协议》</span>
             </div>
          </div>
-         <Confirm price={'50'} info={'确认购买'} />
+         <Confirm price={props.store.recharge(props.store.type)} info={'确认购买'} />
       </div>
    );
 })

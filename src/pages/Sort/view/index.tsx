@@ -26,9 +26,9 @@ const View: FC<Props> = observer((props) => {
                <Button typeLists={props.store.typeLists}
                   selected={props.store.selected} changeSeleted={props.store.changeSeleted} />
                <div className={style.goods}>
-                  {props.store.cardsInfo.map((item) =>
-                     <Card imgUrl={item.imgUrl} title={item.title} words={item.words}
-                        price={item.price} unit={item.unit} onJump={props.store.onJump}  key={item.id} />)}
+                  {props.store.goodsInfo.map((item) =>
+                     item.typeId === props.store.selectItem ? <Card goodInfo={item} onJump={props.store.onJump}  key={item.goodId} 
+                     addGoods={props.store.addGoods}/> : null)}
                </div>
             </div>
          </div>

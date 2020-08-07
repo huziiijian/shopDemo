@@ -17,6 +17,7 @@ interface Props {
 
 const View: FC<Props> = observer((props) => {
 
+
    return (
       <div className={style.home}>
          <div className={style.showContent}>
@@ -26,7 +27,8 @@ const View: FC<Props> = observer((props) => {
             <Route path="/home/cart" component={Cart} />
             <Route path="/home/mine" component={Mine} />
          </div>
-         <NavBar route={props.store.route} setRoute={props.store.setRoute}/>
+         <NavBar route={props.store.route} setRoute={props.store.setRoute} goodTypes={1}
+         goodTypeCount={props.store.goodTypeCount}/>
       </div>
    );
 })

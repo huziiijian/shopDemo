@@ -18,7 +18,7 @@ const Buttons: FC<{
       <div className={style.buttons}>
          {props.typeLists.map((item) => {
             let select = false;
-            props.selected.map((seleItem) => {
+            props.selected.forEach((seleItem) => {
                select = ((seleItem.id === item.id) ? seleItem.selected : select);
             })
             return <button key={item.id} onClick={() => props.changeSeleted(item.id)}

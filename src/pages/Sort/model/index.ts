@@ -4,6 +4,7 @@ import {
    qs,
 } from 'src/utils';
 import Service from '../service'
+import Store from '../../../store'
 
 
 import LifeCycle, { LifeCycleProps } from 'src/utils/VM/lifeCycle'
@@ -15,6 +16,9 @@ class PageModel extends LifeCycle<Params, Query>{
    constructor(props: LifeCycleProps<Params, Query>) {
       super(props)
 
+   }
+   @computed get goodsInfo() {
+      return Store.goodsInfo;
    }
    @observable showLoading = true;
    @observable typeLists: Array<{
@@ -75,78 +79,9 @@ class PageModel extends LifeCycle<Params, Query>{
          selected: item.id === 1 ? true : false
       }
    })
-   @observable cardsInfo:Array<{
-      id:number,
-      imgUrl:string,
-      title:string,
-      words:string,
-      price:number,
-      unit:string
-   }> = [{
-      id:1,
-      imgUrl:'https://image-c.weimobwmc.com/wrz/01db7d6156174910ab0c18988fc2010f.png',
-      title:'手剥橙子生鲜薄皮橙子新西兰产',
-      words:'来自新西兰的新鲜薄皮香甜橙子',
-      price:24,
-      unit:'盒'
-   },{
-      id:2,
-      imgUrl:'https://image-c.weimobwmc.com/wrz/5bc3503c89f344208294475100bd66bc.png',
-      title:'圣女果 小番茄 约1kg 沙拉生食',
-      words:'圣女果 小番茄 约1kg 沙拉生食',
-      price:24,
-      unit:'盒'
-   },{
-      id:3,
-      imgUrl:'https://image-c.weimobwmc.com/wrz/a7b8996288e8470096c7d454777a92fc.png',
-      title:'水果礼盒',
-      words:'圣女果 小番茄 约1kg 沙拉生食',
-      price:24,
-      unit:'盒'
-   },{
-      id:4,
-      imgUrl:'https://image-c.weimobwmc.com/wrz/b3049971c469489f97ba883323ce7800.png',
-      title:'手剥橙子生鲜薄皮橙子新西兰产',
-      words:'手剥橙子生鲜薄皮橙子新西兰产',
-      price:24,
-      unit:'盒'
-   },{
-      id:5,
-      imgUrl:'https://image-c.weimobwmc.com/wrz/a7b8996288e8470096c7d454777a92fc.png',
-      title:'水果礼盒',
-      words:'圣女果 小番茄 约1kg 沙拉生食',
-      price:24,
-      unit:'盒'
-   },{
-      id:6,
-      imgUrl:'https://image-c.weimobwmc.com/wrz/b3049971c469489f97ba883323ce7800.png',
-      title:'手剥橙子生鲜薄皮橙子新西兰产',
-      words:'手剥橙子生鲜薄皮橙子新西兰产',
-      price:24,
-      unit:'盒'
-   },{
-      id:7,
-      imgUrl:'https://image-c.weimobwmc.com/wrz/a7b8996288e8470096c7d454777a92fc.png',
-      title:'水果礼盒',
-      words:'圣女果 小番茄 约1kg 沙拉生食',
-      price:24,
-      unit:'盒'
-   },{
-      id:8,
-      imgUrl:'https://image-c.weimobwmc.com/wrz/01db7d6156174910ab0c18988fc2010f.png',
-      title:'手剥橙子生鲜薄皮橙子新西兰产',
-      words:'来自新西兰的新鲜薄皮香甜橙子',
-      price:24,
-      unit:'盒'
-   },{
-      id:9,
-      imgUrl:'https://image-c.weimobwmc.com/wrz/a7b8996288e8470096c7d454777a92fc.png',
-      title:'水果礼盒',
-      words:'圣女果 小番茄 约1kg 沙拉生食',
-      price:24,
-      unit:'盒'
-   }]
+   @observable selectItem = 1;
    @action changeSeleted = (id: number) => {
+      this.selectItem = id
       this.selected = this.selected.map((item) => {
          return {
             id: item.id,
@@ -154,8 +89,33 @@ class PageModel extends LifeCycle<Params, Query>{
          }
       })
    }
-   @action onJump = (key:string) => {
-      if (key === 'goodInfo') history.push('/goodInfo')
+   @action addGoods = (goodId: number, edit: boolean) => {
+      // 注意observble声明的状态只能用action声明的方法去修改，不能直接在view层用普通函数修改 
+      Store.goodsInfo = this.goodsInfo.map((goodsItem) => {
+         return edit ? { // 判断是否点击过一次
+            ...goodsItem,
+            selectedNum: goodId === goodsItem.goodId ? 1 : goodsItem.selectedNum
+         } : {
+               ...goodsItem,
+               selectedNum: goodId === goodsItem.goodId ? 0 : goodsItem.selectedNum
+            }
+      })
+      const orderInfo: Array<{
+         goodId: number,
+         goodImg: string,
+         goodPrice: number,
+         selectedNum: number,
+         title: string,
+         des: string,
+         unit: string
+      }> = [];
+      this.goodsInfo.forEach((goodsItem) => goodsItem.selectedNum ?
+         orderInfo.push(goodsItem) : null
+      )
+      Store.orderInfo = orderInfo
+   }
+   @action onJump = (id: number) => {
+      history.push('/goodInfo?id=' + id)
    }
 }
 

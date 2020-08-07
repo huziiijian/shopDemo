@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { observer } from "mobx-react";
 import style from '../style/index.less'
 import Goods from './goods'
@@ -10,6 +10,13 @@ interface Props {
 }
 
 const View: FC<Props> = observer((props) => {
+
+   const [selectTime, setSelectTime] = useState(false);
+   const [time, setTime] = useState('选择送达时间')
+   const chooseTime = (time: string) => {
+      setTime(time)
+      setSelectTime(false)
+   }
 
    return (
       <div className={style.confirmOrder}>
@@ -34,15 +41,15 @@ const View: FC<Props> = observer((props) => {
                <p className={style.word}>配送时间</p>
             </div>
             <div className={style.infoRight}>
-               <p className={style.word}>选择送达时间</p>
+               <p className={style.word} onClick={() => setSelectTime(!selectTime)}>{time}</p>
                <img className={style.img}
                   src='https://image-c.weimobwmc.com/wrz/beedd66148784f8c923166eacfb481fa.png' />
             </div>
          </div>
-         <Goods imgs={props.store.imgs} />
+         <Goods checkoutInfo={props.store.checkoutInfo} checkoutTypeCount={props.store.checkoutTypeCount} />
          <div className={style.totalPrice}>
             <span className={style.word}>总计：</span>
-            <span className={style.price}>￥72.00</span>
+            <span className={style.price}>￥{props.store.getTotal}</span>
          </div>
          <div className={style.addInvoice}>
             <p className={style.word}>发票</p>
@@ -52,7 +59,8 @@ const View: FC<Props> = observer((props) => {
                   src='https://image-c.weimobwmc.com/wrz/beedd66148784f8c923166eacfb481fa.png' />
             </div>
          </div>
-         <Confirm price={'72.00'} info={'提交订单'}/>
+         {selectTime ? <input className={style.selectTime} type='date' onChange={(e) => chooseTime(e.target.value)} /> : null}
+         <Confirm price={props.store.getTotal + ''} info={'提交订单'} />
       </div>
    );
 })

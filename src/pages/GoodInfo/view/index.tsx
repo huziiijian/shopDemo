@@ -10,6 +10,8 @@ interface Props {
 
 const View: FC<Props> = observer((props) => {
 
+   const goodInfo = props.store.goodInfo;
+
    return (
       <div className={style.goodInfo}>
          <div className={style.goodShow}>
@@ -19,16 +21,16 @@ const View: FC<Props> = observer((props) => {
                <img src='https://image-c.weimobwmc.com/wrz/6352a1e7775047f79d9e2ed7a46ef1e0.png'
                   className={style.img} />
             </div>
-            <div className={style.carousel}>
+            <div className={style.show}>
                <img className={style.img}
-                  src='https://image-c.weimobwmc.com/wrz/dcc75c9ca80f4f08b42eb637ba56799c.png' />
+                  src={goodInfo.goodImg} />
                <div className={style.info}>
                   <p className={style.title}>
-                     社会格子衬衫女韩范欧洲站欧美时尚个性百搭闲条纹2018春
+                     {goodInfo.title}
                </p>
                   <div className={style.price}>
-                     <div className={style.num}>￥16</div>
-                     <div className={style.unit}>/盒</div>
+                     <div className={style.num}>￥{goodInfo.goodPrice}</div>
+                     <div className={style.unit}>/{goodInfo.unit}</div>
                   </div>
                </div>
             </div>

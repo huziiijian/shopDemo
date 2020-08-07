@@ -196,6 +196,11 @@ class PageModel extends LifeCycle<Params, Query>{
       price: 34
    }
       ];
+   @observable imgUrl = [
+      "https://image-c.weimobwmc.com/wrz/dcc75c9ca80f4f08b42eb637ba56799c.png",
+      "https://image-c.weimobwmc.com/wrz/d29b316000b34e419f6f8ff1578f727e.png",
+      "https://image-c.weimobwmc.com/wrz/dcc75c9ca80f4f08b42eb637ba56799c.png"
+   ]
    @action onJump = (route: string) => {
       if (route === 'stores') history.push('/stores');
    }
