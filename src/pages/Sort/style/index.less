@@ -1,0 +1,184 @@
+.sort {
+   background-color: white;
+
+   .search {
+      background: url(https://image-c.weimobwmc.com/wrz/abd255a6dbbd4f24b996c4d13ab5432a.png) no-repeat center;
+      background-position: 40% 50%;
+      background-size: 6%;
+      border: none;
+      border-radius: 90px;
+      font-size: 5vw;
+      background-color: #F5F6F7;
+      height: 8vw;
+      width: 90%;
+      margin: 5% 4% 2% 4%;
+   }
+
+   .Sales {
+      display: flex;
+
+      .type {
+         text-align: center;
+
+         .focusItem {
+            background: #FFFFFF;
+            height: 7.5vh;
+            width: 23vw;
+            display: flex;
+            line-height: 7.5vh;
+            border-left: solid 3px #56AB2F;
+
+            .word {
+               margin: 0 auto;opacity: 0.7;
+               font-family: Helvetica;
+               font-size: 26px;
+               color: #000000;
+               letter-spacing: 0;
+            }
+         }
+
+         .unFocusItem {
+            .focusItem;
+            background: #f1efef;
+            border-left: solid 3px transparent;
+            .focusItem.word;
+         }
+      }
+
+      .show {
+         padding: 3%;
+
+         .buttons {
+            width: 70vw;
+            display: flex;
+            overflow-x: scroll;
+
+            .focusItem {
+               border: solid 2px #56AB2F;
+               background-color: #FFFFFF;
+               border-radius: 90px;
+               font-family: Helvetica;
+               margin: 0 3% 3% 0;
+               padding: 1%;
+
+               .word {
+                  width: 18vw;
+                  margin: 2% 0;
+                  text-align: center;
+                  line-height: 3.2vw;
+                  font-size: 24px;
+                  color: #45A418;
+                  letter-spacing: 0;
+               }
+            }
+
+            .unFocusItem {
+               .focusItem;
+               opacity: 0.4;
+               border: 2px solid #000000;
+
+               .word {
+                  .focusItem.word;
+                  opacity: 0.4;
+                  font-family: Helvetica;
+                  font-size: 24px;
+                  text-align: center;
+                  color: #000000;
+                  letter-spacing: 0;
+               }
+            }
+         }
+
+         .goods {
+            overflow-y: scroll;
+            height: 84vh;
+            display: block;
+
+            .card {
+               display: flex;
+               margin: 4% auto;
+               // height: 10vh;
+
+               .img {
+                  width: 30%;
+                  height: 10vh;
+               }
+
+               .info {
+                  width: 68%;
+                  margin: auto 0;
+
+                  .title {
+                     margin: 2%;
+                     opacity: 0.7;
+                     font-family: Helvetica;
+                     font-size: 28px;
+                     color: #000000;
+                     letter-spacing: 0;
+                     overflow: hidden;
+                     text-overflow: ellipsis;
+                     white-space: nowrap;
+                  }
+
+                  .words {
+                     margin: 2%;
+                     opacity: 0.5;
+                     font-family: Helvetica;
+                     font-size: 22px;
+                     color: #000000;
+                     letter-spacing: 0;
+                     overflow: hidden;
+                     text-overflow: ellipsis;
+                     white-space: nowrap;
+                  }
+
+                  .select {
+                     display: flex;
+                     justify-content: space-between;
+
+                     .Price {
+                        display: flex;
+
+                        .price {
+                           font-family: Helvetica;
+                           font-size: 40px;
+                           color: #45A418;
+                           letter-spacing: 0;
+                           margin: 5% auto;
+                        }
+
+                        .unit {
+                           opacity: 0.4;
+                           font-family: Helvetica;
+                           font-size: 22px;
+                           color: #000000;
+                           letter-spacing: 0;
+                        }
+                     }
+
+                     .click {
+                        height: 20%;
+                        margin: auto 4%;
+                        width: 16%;
+                        padding: 1% 2%;
+                        border: none;
+                        border-radius: 90%;
+                        background-image: linear-gradient(-45deg, #56AB2F 0%, #A8E063 100%);
+
+                        .img {
+                           width: 100%;
+                           height: 2.6vh;
+                        }
+                     }
+
+                     .hadClick {
+                        .click;
+                        background-image: linear-gradient(-45deg, #c86718c7 0%, #e6f32fbe 100%);
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

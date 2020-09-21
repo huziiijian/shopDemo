@@ -1,0 +1,197 @@
+.balancePage {
+   background-color: #0000000a;
+   font-size: 0;
+
+   .title {
+      display: flex;
+      padding-bottom: 4%;
+      background-color: white;
+
+      .img {
+         width: 6%;
+         height: 8%;
+         margin: 5% 1% 3% 1%;
+      }
+
+      .word {
+         font-family: Helvetica;
+         font-size: 40px;
+         color: #060606;
+         letter-spacing: 0;
+         margin: 5% 20% 3% 35%;
+      }
+   }
+
+   .info {
+      background-color: white;
+
+      .card {
+         display: flex;
+         background-image: linear-gradient(-45deg, #56AB2F 0%, #A8E063 100%);
+         border-radius: 20px;
+         margin: 0 3%;
+         padding: 9% 6% 13% 6%;
+         justify-content: space-between;
+         box-shadow: 0 0 30px 0 #A8E063;
+
+         .showBalance {
+            color: #FFFFFF;
+            font-family: Helvetica;
+            font-size: 32px;
+            letter-spacing: 0;
+
+            .word {
+               margin: 5%;
+            }
+
+            .number {
+               margin: 5%;
+               font-family: Helvetica;
+               font-size: 72px;
+               color: #FFFFFF;
+               letter-spacing: 0;
+               text-shadow: 0 2px 10px #80C53C;
+            }
+         }
+
+         .withDraw {
+            border: 0.4vw solid #FFFFFF;
+            height: 4vh;
+            width: 34%;
+            background-color: transparent;
+            border-radius: 9.6vw;
+            color: white;
+            margin: auto 0;
+            display: flex;
+
+            .icon {
+               width: 26%;
+               margin: auto 6% auto 16%;
+            }
+
+            .word {
+               margin: auto 0;
+            }
+         }
+      }
+
+      .record {
+         display: flex;
+
+         .purchase {
+            display: flex;
+            justify-content: center;
+            padding: 5% 0;
+
+            .icon {
+               background-image: linear-gradient(147deg, #4FB9FE 3%, #3F97FE 95%);
+               width: 20%;
+               border: none;
+               border-radius: 100%;
+               padding: 0;
+               height: 70%;
+               margin: auto 5%;
+
+               .img {
+                  width: 70%
+               }
+            }
+
+            .word {
+               font-family: Helvetica;
+               font-size: 32px;
+               color: #000000;
+               letter-spacing: 0;
+            }
+         }
+
+         .withDraw {
+            .purchase;
+
+            .icon {
+               .icon;
+               background-image: linear-gradient(147deg, #FDD621 3%, #FEB736 95%);
+
+               .img {
+                  .img;
+               }
+            }
+
+            .word {
+               .word;
+            }
+         }
+      }
+   }
+
+   .activity {
+      background-color: #FFFFFF;
+      margin: 5% 0 1% 0;
+      padding: 5% 6% 6% 6%;
+
+      .title {
+         font-family: Helvetica;
+         font-size: 32px;
+         color: #000000;
+         letter-spacing: 0;
+         padding: 0 3%;
+         border-left: solid 6px #56AB2F;
+      }
+
+      .cards {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+
+         .card {
+            padding: 8% 0;
+            width: 47%;
+            border: 2px solid #000000;
+            opacity: 0.4;
+            border-radius: 20px;
+            margin: 5% 0 0 0;
+            color: #000000;
+
+            .words {
+               margin: 0 auto;
+               opacity: 0.5;
+               font-family: Helvetica;
+               font-size: 28px;
+               letter-spacing: 0;
+               text-align: center;
+            }
+         }
+
+         .cardFocus {
+            .card;
+            border: 2px solid #46A419;
+            opacity: 0.6;
+            color: #46A419;
+
+            .word {
+               .words;
+            }
+         }
+      }
+
+      .Agree {
+         margin: 5% 0;
+
+         .agree {
+            opacity: 0.5;
+            font-family: Helvetica;
+            font-size: 24px;
+            color: #999999;
+            letter-spacing: 0;
+         }
+
+         .contract {
+            font-family: PingFangSC-Regular;
+            font-size: 24px;
+            color: #46A419;
+            letter-spacing: 0;
+            margin: auto 0;
+         }
+      }
+   }
+}

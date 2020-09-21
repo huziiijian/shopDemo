@@ -1,0 +1,389 @@
+.shoppingCart {
+   // css多背景
+   background: url(https://image-c.weimobwmc.com/wrz/0331e09782fe42efb8f746a2054cead2.png) center top no-repeat,
+      url(https://image-c.weimobwmc.com/wrz/585cd4aeb4c249a3b4a0cea9b2cb051d.png) center bottom;
+   overflow: scroll;
+
+   .cards {
+      display: flex;
+      justify-content: center;
+
+      .allLikeCardsLeft {
+         width: 48%;
+
+         .allLikeCard {
+            background-color: white;
+            margin: 5% 2%;
+            border-radius: 30px;
+            text-align: center;
+            padding: 1% 1%;
+
+            img {
+               width: 95%;
+            }
+
+            p {
+               opacity: 0.7;
+               font-family: Helvetica;
+               font-size: 28px;
+               color: #000000;
+               letter-spacing: 0;
+               margin: 0 4%;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               white-space: nowrap;
+            }
+
+            span {
+               opacity: 0.5;
+               font-family: Helvetica;
+               font-size: 22px;
+               color: #000000;
+               letter-spacing: 0;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               white-space: nowrap;
+               overflow: hidden;
+               width: 92%;
+               display: inline-block;
+            }
+
+            .shoppingCarts {
+               display: flex;
+               justify-content: space-between;
+
+               div {
+                  margin: 6% 0;
+                  display: flex;
+                  width: 40%;
+               }
+
+               button {
+                  border: none;
+                  padding: 1vw;
+                  margin: 3% 8%;
+                  border-radius: 12vw;
+                  height: 7vw;
+                  width: 7vw;
+                  background-image: linear-gradient(-45deg, #56AB2F 0%, #A8E063 100%);
+               }
+            }
+         }
+      }
+
+      .allLikeCardsRight {
+         width: 48%;
+
+         .allLikeCard {
+            background-color: white;
+            margin: 5% 2%;
+            border-radius: 30px;
+            text-align: center;
+            padding: 1% 1%;
+
+            .button {
+               width: 80%;
+            }
+
+            p {
+               opacity: 0.7;
+               font-family: Helvetica;
+               font-size: 28px;
+               color: #000000;
+               letter-spacing: 0;
+               margin: 0 4%;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               white-space: nowrap;
+            }
+
+            span {
+               opacity: 0.5;
+               font-family: Helvetica;
+               font-size: 22px;
+               color: #000000;
+               letter-spacing: 0;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               white-space: nowrap;
+               overflow: hidden;
+               width: 92%;
+               display: inline-block;
+            }
+
+            .shoppingCarts {
+               display: flex;
+               justify-content: space-between;
+
+               div {
+                  margin: 6% 0;
+                  display: flex;
+                  width: 40%;
+               }
+
+               button {
+                  border: none;
+                  padding: 1vw;
+                  margin: 3% 8%;
+                  border-radius: 12vw;
+                  height: 7vw;
+                  width: 7vw;
+                  background-image: linear-gradient(-45deg, #56AB2F 0%, #A8E063 100%);
+
+                  img {
+                     width: 100%;
+                     height: 100%;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .title {
+      display: flex;
+
+      .carts {
+         margin: 8% auto 5% auto;
+         width: 15%;
+         font-family: Helvetica;
+         font-size: 36px;
+         color: #FFFFFF;
+         letter-spacing: 0;
+      }
+
+      .edit {
+         position: relative;
+         right: 4%;
+         top: 10%;
+         margin-top: 9%;
+         font-family: Helvetica;
+         font-size: 30px;
+         color: #FFFFFF;
+         letter-spacing: 0;
+      }
+   }
+
+   .cardss {
+      border-radius: 30px;
+      margin: auto;
+      width: 94%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+
+      .card {
+         display: flex;
+         padding: 4% 3% 4% 2%;
+
+         .selected {
+            background: url(https://image-c.weimobwmc.com/wrz/9d7c3aab316c4aa7a7844b1c47b7685d.png) center top no-repeat;
+            background-size: 6vw;
+            border: solid 0.5vw transparent;
+            height: 5.5vw;
+            width: 6%;
+            border-radius: 180%;
+            margin: auto 2%;
+         }
+
+         .unSelected {
+            .selected;
+            border: solid 0.5vw grey;
+            background: white;
+         }
+
+         .pic {
+            width: 30%;
+            margin: auto 2%;
+            height: 100%;
+         }
+
+         .Info {
+            width: 56%;
+
+            .title {
+               white-space: nowrap;
+               text-overflow: ellipsis;
+               overflow: hidden;
+               display: block;
+               opacity: 0.7;
+               font-family: Helvetica;
+               font-size: 32px;
+               color: #000000;
+               letter-spacing: 0;
+               margin-bottom: 0;
+            }
+
+            .info {
+               opacity: 0.5;
+               font-family: Helvetica;
+               font-size: 22px;
+               color: #000000;
+               letter-spacing: 0;
+            }
+
+            .select {
+               display: flex;
+               justify-content: space-between;
+
+               .priceShow {
+                  .price {
+                     font-family: Helvetica;
+                     font-size: 40px;
+                     color: #45A418;
+                     letter-spacing: 0;
+                  }
+
+                  .unit {
+                     opacity: 0.4;
+                     font-family: Helvetica;
+                     font-size: 22px;
+                     color: #000000;
+                     letter-spacing: 0;
+                  }
+               }
+
+               .selectNum {
+                  display: flex;
+                  width: 30%;
+                  justify-content: space-around;
+
+                  .minus {
+                     margin: auto 0;
+                     background: url(https://image-c.weimobwmc.com/wrz/e8ab9eaa6e7c45358da73d1e9eadaaab.png) center top no-repeat;
+                     background-size: 4.5vw;
+                     border: solid 0.5vw transparent;
+                     height: 5vw;
+                     width: 5vw;
+                     border-radius: 90px;
+                  }
+
+                  .num {
+                     margin: auto 2%;
+                  }
+
+                  .add {
+                     margin: auto 0;
+                     background: url(https://image-c.weimobwmc.com/wrz/bcc63f5effb94821954ea4f022242234.png) center top no-repeat;
+                     background-size: 4.5vw;
+                     border: solid 0.5vw transparent;
+                     height: 5vw;
+                     width: 5vw;
+                     border-radius: 90px;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .guessYouLike {
+      display: flex;
+      justify-content: start;
+
+      .pic {
+         width: 8%;
+         height: 100%;
+         margin: auto 2%;
+      }
+
+      .word {
+         font-family: Helvetica;
+         font-size: 32px;
+         color: #45A418;
+         letter-spacing: 0;
+         margin: 3% 0;
+      }
+   }
+}
+
+.toPay {
+   display: flex;
+   justify-content: space-between;
+   background-color: #FFFFFF;
+   position: fixed;
+   width: 100%;
+   height: 8%;
+   bottom: 6%;
+
+   .left {
+      display: flex;
+      width: 18%;
+      margin: auto 0;
+      justify-content: center;
+
+      .selected {
+         background: url(https://image-c.weimobwmc.com/wrz/9d7c3aab316c4aa7a7844b1c47b7685d.png) center top no-repeat;
+         background-size: 6vw;
+         border: solid 0.5vw transparent;
+         height: 5.8vw;
+         width: 5.6vw;
+         border-radius: 180%;
+         margin: auto 10%;
+      }
+
+      .unSelected {
+         .selected;
+         border: solid 0.5vw grey;
+         background: white;
+      }
+
+      .word {
+         font-size: 3.7333333333vw;
+         margin: 0;
+         opacity: 0.7;
+         font-family: Helvetica;
+         font-size: 28px;
+         color: #000000;
+         letter-spacing: 0;
+      }
+   }
+
+   .right {
+      margin: auto 0;
+      .left;
+      width: 65%;
+
+      .price {
+         display: flex;
+         justify-content: center;
+         width: 50%;
+
+         .title {
+            width: 30%;
+            opacity: 0.7;
+            font-family: Helvetica;
+            font-size: 28px;
+            color: #3E3836;
+            letter-spacing: 0;
+         }
+
+         .num {
+            width: 50%;
+            font-family: Helvetica;
+            font-size: 40px;
+            color: #4AA61F;
+            letter-spacing: 0;
+            margin: auto 0;
+         }
+      }
+
+      .click {
+         width: 70%;
+         background-image: linear-gradient(-45deg, #56AB2F 0%, #A8E063 100%);
+
+         .btn {
+            background-color: transparent;
+            text-align: center;
+            margin: 8%;
+            border: none;
+            margin: 9% auto;
+            width: 68%;
+            font-family: Helvetica;
+            font-size: 32px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+         }
+      }
+   }
+}
